@@ -13,8 +13,16 @@ double smallestMonth(double [], int);
 int main()
 {
 	const int size = 12;
-	string arr[] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+	string arr[] = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
 	double amounts[size];
+
+	input(amounts, size);
+
+	cout << "Here are the credit card totals for each month:" << endl;
+	for (int i = 0; i < size; i++)
+	{
+		cout << arr[i] << " : " << "$" << amounts[i] << endl;
+	}
 }
 
 void input(double amounts[], int size)
