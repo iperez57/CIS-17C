@@ -20,6 +20,9 @@ int main()
 		return 0;
 	}
 
+	readPrices(file, arr);
+	displayPrices(arr, size);
+
 }
 
 void readPrices(ifstream& file, int arr[])
@@ -27,5 +30,14 @@ void readPrices(ifstream& file, int arr[])
 	for (int i = 0; i < 15; i++)
 	{
 		file >> arr[i];
+	}
+}
+
+void displayPrices(int arr[], int size)
+{
+	cout << "The prices for the 15 rows are: " << endl;
+	for (int i = 0; i < size; i++)
+	{
+		cout << "$" << arr[i] << endl;
 	}
 }
