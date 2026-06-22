@@ -1,6 +1,7 @@
 // Assignment_0_PtA.cpp
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -25,21 +26,21 @@ int main()
 	cout << "Here are the credit card totals for each month:" << endl;
 	for (int i = 0; i < size; i++)
 	{
-		cout << arr[i] << " : " << "$" << amounts[i] << endl;
+		cout << left << setw(10) << arr[i] << " : " << "$" << fixed << setprecision(2) << amounts[i] << endl;
 	}
 	cout << endl;
 
 	total = totalAmount(amounts, size);
-	cout << "The total amount of money spent was $" << total << endl;
+	cout << "The total amount of money spent was $" << fixed << setprecision(2) << total << endl;
 
 	average = averageAmount(amounts, size);
-	cout << "The average amount of money spent per month was $" << average << endl;
+	cout << "The average amount of money spent per month was $" << fixed << setprecision(2) << average << endl;
 
 	largest = largestMonth(amounts, size);
-	cout << "The most amount of money spent in a month was $" << largest << endl;
+	cout << "The most amount of money spent in a month was $" << fixed << setprecision(2) << largest << endl;
 
 	smallest = smallestMonth(amounts, size);
-	cout << "The least amount of money spent in a month was $" << smallest << endl;
+	cout << "The least amount of money spent in a month was $" << fixed << setprecision(2) << smallest << endl;
 
 }
 
