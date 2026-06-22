@@ -21,3 +21,11 @@ int main()
 	}
 
 }
+
+void readPrices(ifstream& file, int arr[])
+{
+	for (int i = 0; i < 15; i++)
+	{
+		file >> arr[i];
+	}
+}
