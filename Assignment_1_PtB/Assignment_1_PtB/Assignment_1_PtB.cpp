@@ -52,8 +52,8 @@ return 0;
 using namespace std;
 
 
-void findDisorder(int arr[], int n, int* p) {
-
+void findDisorder(int arr[], int n, int*& p) 
+{
 	for (int k = 1; k < n; k++) 
 	{
 		if (arr[k] < arr[k - 1]) 
