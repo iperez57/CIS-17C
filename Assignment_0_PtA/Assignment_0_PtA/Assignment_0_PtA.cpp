@@ -46,9 +46,14 @@ int main()
 void input(double amounts[], int size)
 {
 	double amt;
+
 	for (int i = 0; i < size; i++)
 	{
 		cin >> amt;
+		if (amt < 0)
+		{
+			amt = 0;
+		}
 		amounts[i] = amt;
 	}
 }
