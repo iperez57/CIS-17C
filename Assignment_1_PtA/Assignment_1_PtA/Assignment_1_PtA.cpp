@@ -39,15 +39,18 @@ int main()
 
 	*ptr = 10;        // set arr[0] to 10
 
-	*ptr + 1 = 20;        // set arr[1] to 20 ptr += 2;
+	*(ptr + 1) = 20;        // set arr[1] to 20 ptr += 2;
 
-	ptr[0] = 30;        // set arr[2] to 30
+	ptr[2] = 30;        // set arr[2] to 30
+
+	ptr = arr + 2;
 
 
-	while (ptr >= arr) {
-		ptr--;
 
+	while (ptr >= arr)
+	{
 		cout << ' ' << *ptr;        // print values
+		ptr--;
 
 	}
 
