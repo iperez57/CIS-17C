@@ -15,7 +15,8 @@ int main()
 	const int size = 12;
 	string arr[] = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
 	double amounts[size];
-	double totAmt;
+	double total;
+	double average;
 
 	input(amounts, size);
 
@@ -26,8 +27,11 @@ int main()
 	}
 	cout << endl;
 
-	totAmt = totalAmount(amounts, size);
-	cout << "The total amount of money spent was $" << totAmt;
+	total = totalAmount(amounts, size);
+	cout << "The total amount of money spent was $" << total << endl;
+
+	average = averageAmount(amounts, size);
+	cout << "The average amount of money spent per month was $" << average << endl;
 }
 
 void input(double amounts[], int size)
@@ -42,12 +46,25 @@ void input(double amounts[], int size)
 
 double totalAmount(double amounts[], int size)
 {
-	double total = 0;
+	double tot = 0;
 
 	for (int i = 0; i < size; i++)
 	{
-		total += amounts[i];
+		tot += amounts[i];
 	}
 
-	return total;
+	return tot;
+}
+
+double averageAmount(double amounts[], int size)
+{
+	double avg = 0;
+
+	for (int i = 0; i < size; i++)
+	{
+		avg += amounts[i];
+	}
+
+	avg = avg / size;
+	return avg;
 }
