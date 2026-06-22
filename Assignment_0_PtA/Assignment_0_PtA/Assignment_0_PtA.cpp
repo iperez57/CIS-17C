@@ -18,6 +18,7 @@ int main()
 	double total;
 	double average;
 	double largest;
+	double smallest;
 
 	input(amounts, size);
 
@@ -37,6 +38,8 @@ int main()
 	largest = largestMonth(amounts, size);
 	cout << "The most amount of money spent in a month was $" << largest << endl;
 
+	smallest = smallestMonth(amounts, size);
+	cout << "The least amount of money spent in a month was $" << smallest << endl;
 
 }
 
@@ -88,4 +91,19 @@ double largestMonth(double amounts[], int size)
 	}
 
 	return lar;
+}
+
+double smallestMonth(double amounts[], int size)
+{
+	double sml = amounts[0];
+	
+	for (int i = 0; i < size; i++)
+	{
+		if (amounts[i] < sml)
+		{
+			sml = amounts[i];
+		}
+	}
+
+	return sml;
 }
