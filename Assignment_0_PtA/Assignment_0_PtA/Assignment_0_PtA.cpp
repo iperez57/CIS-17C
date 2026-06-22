@@ -17,6 +17,7 @@ int main()
 	double amounts[size];
 	double total;
 	double average;
+	double largest;
 
 	input(amounts, size);
 
@@ -32,6 +33,11 @@ int main()
 
 	average = averageAmount(amounts, size);
 	cout << "The average amount of money spent per month was $" << average << endl;
+
+	largest = largestMonth(amounts, size);
+	cout << "The most amount of money spent in a month was $" << largest << endl;
+
+
 }
 
 void input(double amounts[], int size)
@@ -67,4 +73,19 @@ double averageAmount(double amounts[], int size)
 
 	avg = avg / size;
 	return avg;
+}
+
+double largestMonth(double amounts[], int size)
+{
+	double lar = amounts[0];
+
+	for (int i = 0; i < size; i++)
+	{
+		if (amounts[i] > lar)
+		{
+			lar = amounts[i];
+		}
+	}
+
+	return lar;
 }
