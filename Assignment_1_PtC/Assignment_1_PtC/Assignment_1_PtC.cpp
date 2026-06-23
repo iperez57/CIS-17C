@@ -38,6 +38,8 @@ void hypotenuse(double leg1, double leg2, double* resultPtr)
 
 int main() {
 	double* p;
+	double result;
+	p = &result;
 
 	hypotenuse(1.5, 2.0, p);
 	cout << "The hypotenuse is " << *p << endl;
