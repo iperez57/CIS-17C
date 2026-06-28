@@ -74,6 +74,16 @@ public:
     int size() 
     {
         //STUDENT COMPLETES THIS
+        int counter = 0;
+        
+        Node* current = head;
+
+        while (current != nullptr)
+        {
+            counter++;
+            current = current->next;
+        }
+        return counter;
     }
 
     void addToFront(int v) 
