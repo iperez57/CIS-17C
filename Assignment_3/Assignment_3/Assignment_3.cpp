@@ -55,6 +55,15 @@ public:
     ~LinkedList() 
     {
         //STUDENT COMPLETES THIS
+        Node* current = head;
+        
+        while (current != nullptr)
+        {
+            Node* temp = current->next;
+            delete current;
+            current = temp;
+        }
+        head = nullptr;
     }
 
     LinkedList operator=(const LinkedList& src) 
