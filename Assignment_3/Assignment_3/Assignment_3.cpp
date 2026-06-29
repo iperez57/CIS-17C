@@ -98,6 +98,28 @@ public:
     void addToRear(int v) 
     {
         //STUDENT COMPLETES THIS
+        Node* newNode = new Node;
+        newNode->value = v;
+        
+        Node* current = head;
+
+        if (current == nullptr)
+        {
+            head = newNode;
+            return;
+        }
+        
+
+        while (current != nullptr)
+        {
+            if (current->next == nullptr)
+            {
+                current->next = newNode;
+                newNode->next = nullptr;
+                return;
+            }
+            current = current->next;
+        }
     }
 
     void deleteItem(int v) 
