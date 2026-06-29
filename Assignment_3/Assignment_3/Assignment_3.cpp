@@ -148,9 +148,13 @@ public:
         }
     }
 
-    void swapList(const LinkedList& Other) 
+    void swapList(LinkedList& Other) 
     {
         //STUDENT COMPLETES THIS
+        Node* temp;
+        temp = this->head;
+        this->head = Other.head;
+        Other.head = temp;
     }
 
     void printItems() 
