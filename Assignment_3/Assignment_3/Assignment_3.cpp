@@ -89,6 +89,10 @@ public:
     void addToFront(int v) 
     {
         //STUDENT COMPLETES THIS
+        Node* newNode = new Node;
+        newNode->value = v;
+        newNode->next = head;
+        head = newNode;
     }
 
     void addToRear(int v) 
