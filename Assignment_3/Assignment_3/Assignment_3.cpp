@@ -125,7 +125,27 @@ public:
     void deleteItem(int v) 
     {
         //STUDENT COMPLETES THIS
-
+        Node* current = head;
+        Node* previous = nullptr;
+        
+        while (current != nullptr)
+        {
+            if (current->value == v)
+            {
+                if (previous == nullptr)
+                {
+                    head = current->next;
+                }
+                else
+                {
+                    previous->next = current->next;
+                }
+                delete current;
+                return;
+            }
+            previous = current;
+            current = current->next;
+        }
     }
 
     void swapList(const LinkedList& Other) 
