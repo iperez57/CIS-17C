@@ -156,6 +156,13 @@ public:
     void printItems() 
     {
         //STUDENT COMPLETES THIS
+        Node* current = head;
+
+        while (current != nullptr)
+        {
+            cout << current->value << endl;
+            current = current->next;
+        }
 
     }
 };
