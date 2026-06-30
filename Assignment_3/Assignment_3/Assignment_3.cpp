@@ -66,9 +66,54 @@ public:
         head = nullptr;
     }
 
-    LinkedList operator=(const LinkedList& src) 
+    LinkedList& operator=(const LinkedList& src) 
     {
        //STUDENT COMPLETES THIS
+        Node* current = head;
+        Node* temp;
+        Node* srcCurrent = src.head;
+        
+
+        if (this == &src)
+        {
+            return *this;
+        }
+        
+        while (current != nullptr)
+        {
+            temp = current->next;
+            delete current;
+            current = temp;
+        }
+        head = nullptr;
+
+        if (src.head == nullptr)
+        {
+            return *this;
+        }
+
+        head = new Node;
+        head->value = srcCurrent->value;
+        head->next = nullptr;
+
+        Node* tail = head;
+
+        srcCurrent = srcCurrent->next;
+
+        while (srcCurrent != nullptr)
+        {
+            Node* newNode = new Node;
+            newNode->value = srcCurrent->value;
+            newNode->next = nullptr;
+
+            tail->next = newNode;
+            tail = newNode;
+
+            srcCurrent = srcCurrent->next;
+        }
+
+        return *this;
+
     }
 
     int size() 
