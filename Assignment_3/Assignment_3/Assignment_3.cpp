@@ -145,7 +145,9 @@ public:
         //STUDENT COMPLETES THIS
         Node* newNode = new Node;
         newNode->value = v;
-        
+        newNode->next = nullptr;
+
+
         Node* current = head;
 
         if (current == nullptr)
