@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Assignment_4.cpp" />
+    <ClCompile Include="MyStack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyStack.h" />
