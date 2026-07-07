@@ -52,3 +52,15 @@ int MyStack::pop()
 	delete current;
 	return n;
 }
+
+int MyStack::peek()
+{
+	if (dummy.next == nullptr)
+	{
+		return INT_MIN;
+	}
+	else
+	{
+		return dummy.next->value;
+	}
+}
