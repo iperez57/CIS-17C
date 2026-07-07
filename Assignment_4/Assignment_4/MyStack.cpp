@@ -70,3 +70,18 @@ int MyStack::peek()
 		return dummy.next->value;
 	}
 }
+
+int MyStack::size()
+{
+	int counter = 0;
+
+	Node* current = dummy.next;
+
+	while (current != nullptr)
+	{
+		counter++;
+		current = current->next;
+	}
+
+	return counter;
+}
