@@ -29,3 +29,13 @@ MyStack::MyStack(const MyStack& rhs)
 		current = current->next;
 	}
 }
+
+void MyStack::push(int v)
+{
+	Node* newNode = new Node;
+
+	newNode->value = v;
+	newNode->next = dummy.next;
+
+	dummy.next = newNode;
+}
