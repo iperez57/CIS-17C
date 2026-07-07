@@ -44,6 +44,12 @@ void MyStack::push(int v)
 int MyStack::pop()
 {
 	int n;
+
+	if (dummy.next == nullptr)
+	{
+		return INT_MIN;
+	}
+
 	Node* current = dummy.next;
 
 	dummy.next = current->next;
