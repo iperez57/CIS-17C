@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Node.h"
 #include "MyStack.h"
+#include <climits>
 
 using namespace std;
 
@@ -38,4 +39,16 @@ void MyStack::push(int v)
 	newNode->next = dummy.next;
 
 	dummy.next = newNode;
+}
+
+int MyStack::pop()
+{
+	int n;
+	Node* current = dummy.next;
+
+	dummy.next = current->next;
+	n = current->value;
+
+	delete current;
+	return n;
 }
