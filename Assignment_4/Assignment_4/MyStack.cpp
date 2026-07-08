@@ -31,6 +31,42 @@ MyStack::MyStack(const MyStack& rhs)
 	}
 }
 
+MyStack MyStack::operator=(const MyStack& rhs)
+{
+	Node* current = dummy.next;
+	Node* temp;
+	Node* srcCurrent = rhs.dummy.next;
+
+	if (this == &rhs)
+	{
+		return *this;
+	}
+
+	while (current != nullptr)
+	{
+		temp = current->next;
+		delete current;
+		current = temp;
+	}
+
+	dummy.next = nullptr;
+	dummy.value = rhs.dummy.value;
+	
+	Node* tail = &dummy;
+
+	while (srcCurrent != nullptr)
+	{
+		tail->next = new Node;
+		tail = tail->next;
+
+		tail->value = srcCurrent->value;
+		tail->next = nullptr;
+
+		srcCurrent = srcCurrent->next;
+	}
+	return *this;
+}
+
 void MyStack::push(int v)
 {
 	Node* newNode = new Node;
