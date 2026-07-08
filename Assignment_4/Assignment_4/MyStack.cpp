@@ -74,7 +74,6 @@ int MyStack::peek()
 int MyStack::size()
 {
 	int counter = 0;
-
 	Node* current = dummy.next;
 
 	while (current != nullptr)
@@ -82,6 +81,17 @@ int MyStack::size()
 		counter++;
 		current = current->next;
 	}
-
 	return counter;
+}
+
+void MyStack::printStack()
+{
+	Node* current = dummy.next;
+
+	while (current != nullptr)
+	{
+		cout << current->value << " ";
+		current = current->next;
+	}
+	cout << endl;
 }
