@@ -95,3 +95,16 @@ void MyStack::printStack()
 	}
 	cout << endl;
 }
+
+MyStack::~MyStack()
+{
+	Node* current = dummy.next;
+
+	while (current != nullptr)
+	{
+		Node* temp = current->next;
+		delete current;
+		current = temp;
+	}
+	dummy.next = nullptr;
+}
