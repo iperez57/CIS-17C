@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Assignment_4_PtB.cpp" />
+    <ClCompile Include="MyQueue.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyQueue.h" />
