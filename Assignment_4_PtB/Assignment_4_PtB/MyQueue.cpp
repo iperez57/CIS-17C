@@ -28,3 +28,38 @@ MyQueue::MyQueue(const MyQueue& rhs)
 	}
 }
 
+MyQueue MyQueue::operator=(const MyQueue& rhs)
+{
+	if (this == &rhs)
+	{
+		return *this;
+	}
+
+	Node* current = dummy.next;
+	Node* temp;
+	Node* srcCurrent = rhs.dummy.next;
+
+	while (current != nullptr)
+	{
+		temp = current->next;
+		delete current;
+		current = temp;
+	}
+
+	dummy.next = nullptr;
+	dummy.value = rhs.dummy.value;
+
+	Node* tail = &dummy;
+
+	while (srcCurrent != nullptr)
+	{
+		tail->next = new Node;
+		tail = tail->next;
+
+		tail->value = srcCurrent->value;
+		tail->next = nullptr;
+
+		srcCurrent = srcCurrent->next;
+	}
+	return *this;
+}
