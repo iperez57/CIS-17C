@@ -124,3 +124,15 @@ int MyQueue::size()
 
 	return counter;
 }
+
+void MyQueue::printQueue()
+{
+	Node* current = dummy.next;
+
+	while (current != nullptr)
+	{
+		cout << current->value << " ";
+		current = current->next;
+	}
+	cout << endl;
+}
