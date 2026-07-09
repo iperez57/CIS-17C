@@ -63,3 +63,19 @@ MyQueue MyQueue::operator=(const MyQueue& rhs)
 	}
 	return *this;
 }
+
+void MyQueue::push(int v)
+{
+	Node* newNode = new Node;
+	Node* current = &dummy;
+
+	newNode->value = v;
+	newNode->next = nullptr;
+
+	while (current->next != nullptr)
+	{
+		current = current->next;
+	}
+
+	current->next = newNode;
+}
