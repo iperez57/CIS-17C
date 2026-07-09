@@ -109,3 +109,18 @@ int MyQueue::peek()
 
 	return n;
 }
+
+int MyQueue::size()
+{
+	int counter = 0;
+
+	Node* current = dummy.next;
+
+	while (current != nullptr)
+	{
+		counter++;
+		current = current->next;
+	}
+
+	return counter;
+}
