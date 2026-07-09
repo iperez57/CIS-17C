@@ -97,3 +97,15 @@ int MyQueue::pop()
 	delete temp;
 	return n;
 }
+
+int MyQueue::peek()
+{
+	if (dummy.next == nullptr)
+	{
+		return INT_MIN;
+	}
+
+	int n = dummy.next->value;
+
+	return n;
+}
