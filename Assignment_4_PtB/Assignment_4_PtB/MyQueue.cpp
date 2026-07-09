@@ -1,4 +1,6 @@
 #include "MyQueue.h"
+#include <climits>
+#include <iostream>
 
 using namespace std;
 
@@ -78,4 +80,20 @@ void MyQueue::push(int v)
 	}
 
 	current->next = newNode;
+}
+
+int MyQueue::pop()
+{
+	if (dummy.next == nullptr)
+	{
+		return INT_MIN;
+	}
+	
+	Node* temp = dummy.next;
+	int n = temp->value;
+
+	dummy.next = temp->next;
+
+	delete temp;
+	return n;
 }
