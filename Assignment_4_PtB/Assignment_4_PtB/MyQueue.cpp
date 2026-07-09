@@ -136,3 +136,16 @@ void MyQueue::printQueue()
 	}
 	cout << endl;
 }
+
+MyQueue::~MyQueue()
+{
+	Node* current = dummy.next;
+
+	while (current != nullptr)
+	{
+		Node* temp = current->next;
+		delete current;
+		current = temp;
+	}
+	dummy.next = nullptr;
+}
