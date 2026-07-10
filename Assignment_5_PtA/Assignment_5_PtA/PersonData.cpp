@@ -61,3 +61,38 @@ void PersonData::setPhone(string s)
 {
 	phone = s;
 }
+
+string PersonData::getFirstName()
+{
+	return firstName;
+}
+
+string PersonData::getLastName()
+{
+	return lastName;
+}
+
+string PersonData::getAddress()
+{
+	return address;
+}
+
+string PersonData::getCity()
+{
+	return city;
+}
+
+string PersonData::getState()
+{
+	return state;
+}
+
+string PersonData::getZip()
+{
+	return zip;
+}
+
+string PersonData::getPhone()
+{
+	return phone;
+}
