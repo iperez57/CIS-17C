@@ -26,3 +26,38 @@ PersonData::PersonData(string last, string first, string addr, string cit, strin
 	zip = zi;
 	phone = ph;
 }
+
+void PersonData::setFirstName(string s)
+{
+	firstName = s;
+}
+
+void PersonData::setLastName(string s)
+{
+	lastName = s;
+}
+
+void PersonData::setAddress(string s)
+{
+	address = s;
+}
+
+void PersonData::setCity(string s)
+{
+	city = s;
+}
+
+void PersonData::setState(string s)
+{
+	state = s;
+}
+
+void PersonData::setZip(string s)
+{
+	zip = s;
+}
+
+void PersonData::setPhone(string s)
+{
+	phone = s;
+}
