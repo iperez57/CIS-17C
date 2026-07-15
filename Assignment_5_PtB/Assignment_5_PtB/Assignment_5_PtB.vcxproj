@@ -126,11 +126,13 @@
     <ClCompile Include="Assignment_5_PtB.cpp" />
     <ClCompile Include="Doctor.cpp" />
     <ClCompile Include="Lawyer.cpp" />
+    <ClCompile Include="SWE.cpp" />
     <ClCompile Include="Worker.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Doctor.h" />
     <ClInclude Include="Lawyers.h" />
+    <ClInclude Include="SWE.h" />
     <ClInclude Include="Worker.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -27,6 +27,9 @@
     <ClCompile Include="Lawyer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SWE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Worker.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Lawyers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SWE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
