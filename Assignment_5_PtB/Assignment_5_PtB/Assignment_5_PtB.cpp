@@ -1,20 +1,88 @@
-// Assignment_5_PtB.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// Assignment_5_PtB.cpp
 
 #include <iostream>
+#include "Worker.h"
+#include "Doctor.h"
+#include "Lawyers.h"
+#include "SWE.h"
+#include "SalesPerson.h"
+
+using namespace std;
+
+void printSalary(Worker& worker);
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Doctor doctor("Bob");
+    Lawyer lawyer("John");
+    Swe swe("Sarah");
+    SalesPerson salesperson("Mike");
+
+    cout << "Testing Accessor Functions:" << endl;
+
+    cout << "Doctor Name: " << doctor.getName() << endl;
+    cout << "Doctor Salary: $" << doctor.getSalary() << endl;
+
+    cout << "Lawyer Name: " << lawyer.getName() << endl;
+    cout << "Lawyer Salary: $" << lawyer.getSalary() << endl;
+
+    cout << "Software Engineer Name: " << swe.getName() << endl;
+    cout << "Software Engineer Salary: $" << swe.getSalary() << endl;
+
+    cout << "Salesperson Name: " << salesperson.getName() << endl;
+    cout << "Salesperson Salary: $" << salesperson.getSalary() << endl;
+
+
+    cout << endl << "Testing Mutator Functions:" << endl;
+
+    cout << endl << "Changing Doctor information:" << endl;
+    doctor.setName("Robert");
+    doctor.setSalary(300000);
+    cout << "Name: " << doctor.getName() << endl;
+    cout << "Salary: $" << doctor.getSalary() << endl;
+
+
+    cout << endl << "Changing Lawyer information:" << endl;
+    lawyer.setName("James");
+    lawyer.setSalary(150000);
+    cout << "Name: " << lawyer.getName() << endl;
+    cout << "Salary: $" << lawyer.getSalary() << endl;
+
+
+    cout << endl << "Changing Software Engineer information:" << endl;
+    swe.setName("Emily");
+    swe.setSalary(120000);
+    cout << "Name: " << swe.getName() << endl;
+    cout << "Salary: $" << swe.getSalary() << endl;
+
+
+    cout << endl << "Changing Salesperson information:" << endl;
+    salesperson.setName("Michael");
+    salesperson.setSalary(70000);
+    cout << "Name: " << salesperson.getName() << endl;
+    cout << "Salary: $" << salesperson.getSalary() << endl;
+
+    cout << endl << "Testing Polymorphic printSalary Function:" << endl;
+
+    cout << endl << "Testing Doctor:" << endl;
+    printSalary(doctor);
+
+    cout << "Testing Lawyer:" << endl;
+    printSalary(lawyer);
+
+    cout << "Testing Software Engineer:" << endl;
+    printSalary(swe);
+
+    cout << "Testing Salesperson:" << endl;
+    printSalary(salesperson);
+
+    return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+void printSalary(Worker& worker)
+{
+    cout << "Name: " << worker.getName() << endl;
+    cout << "Yearly Salary: $" << worker.getSalary() << endl;
+    cout << "Weekly Salary: $" << worker.salaryPerWeek() << endl;
+    cout << endl;
+}
