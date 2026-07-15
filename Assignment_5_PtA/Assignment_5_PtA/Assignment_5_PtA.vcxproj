@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClCompile Include="Assignment_5_PtA.cpp" />
     <ClCompile Include="PersonData.cpp" />
+    <ClCompile Include="StudentData.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PersonData.h" />

@@ -11,9 +11,10 @@ class StudentData : public PersonData
 private:
 	int studentID;
 	bool incomingFreshman;
+	static int nextID;
 public:
 	StudentData();
-	StudentData(string last, string first, string addr, string city, string st, string zip, string phone, int id, bool freshman);
+	StudentData(string last, string first, string addr, string cit, string st, string zi, string ph, int i, bool b);
 
 	//setters
 	void setStudentID(int i);
