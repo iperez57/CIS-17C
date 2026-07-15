@@ -31,3 +31,13 @@ void StudentData::setStudentID()
 {
 	studentID = nextID++;
 }
+
+int StudentData::getStudentID()
+{
+	return studentID;
+}
+
+bool StudentData::getIncomingFreshman()
+{
+	return incomingFreshman;
+}

@@ -11,7 +11,7 @@ class StudentData : public PersonData
 private:
 	int studentID;
 	bool incomingFreshman;
-	static int nextID;
+	static int nextID = 0;
 public:
 	StudentData();
 	StudentData(string last, string first, string addr, string cit, string st, string zi, string ph, bool b);
