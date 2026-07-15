@@ -23,3 +23,13 @@ void Worker::setSalary(double d)
 {
 	salary = d;
 }
+
+string Worker::getName()
+{
+	return name;
+}
+
+double Worker::getSalary()
+{
+	return salary;
+}
