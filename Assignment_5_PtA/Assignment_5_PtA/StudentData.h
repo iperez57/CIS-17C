@@ -14,7 +14,7 @@ private:
 	static int nextID;
 public:
 	StudentData();
-	StudentData(string last, string first, string addr, string cit, string st, string zi, string ph, int i, bool b);
+	StudentData(string last, string first, string addr, string cit, string st, string zi, string ph, bool b);
 
 	//setters
 	void setStudentID(int i);

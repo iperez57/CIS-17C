@@ -9,7 +9,7 @@ StudentData::StudentData()
 	
 }
 
-StudentData::StudentData(string last, string first, string addr, string cit, string st, string zi, string ph, int i, bool b)
+StudentData::StudentData(string last, string first, string addr, string cit, string st, string zi, string ph, bool b)
 {
 	setFirstName(first);
 	setLastName(last);
