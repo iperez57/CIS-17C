@@ -2,9 +2,11 @@
 
 #include "StudentData.h"
 
+int StudentData::nextID = 0;
+
 StudentData::StudentData()
 {
-	studentID = 0;
+	studentID = nextID++;
 	incomingFreshman = false;
 	
 }
