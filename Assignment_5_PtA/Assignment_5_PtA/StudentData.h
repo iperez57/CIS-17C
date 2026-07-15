@@ -17,7 +17,7 @@ public:
 	StudentData(string last, string first, string addr, string cit, string st, string zi, string ph, bool b);
 
 	//setters
-	void setStudentID(int i);
+	void setStudentID();
 	void setIncomingFreshman(bool b);
 
 	//getters

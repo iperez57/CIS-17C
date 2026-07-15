@@ -21,3 +21,13 @@ StudentData::StudentData(string last, string first, string addr, string cit, str
 	studentID = nextID++;
 	incomingFreshman = b;
 }
+
+void StudentData::setIncomingFreshman(bool b)
+{
+	incomingFreshman = b;
+}
+
+void StudentData::setStudentID()
+{
+	studentID = nextID++;
+}
