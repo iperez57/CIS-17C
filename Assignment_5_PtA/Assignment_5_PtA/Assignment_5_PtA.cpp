@@ -1,20 +1,85 @@
-// Assignment_5_PtA.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// Assignment_5_PtA.cpp
+
 
 #include <iostream>
+#include "StudentData.h"
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    string fN = "Bob";
+    string lN = "Frank";
+    string add = "11111 Cool Ln";
+    string cit = "Mo";
+    string state = "CA";
+    string zip = "999999";
+    string phone = "1111111111";
+    bool freshman = true;
+
+    cout << "Testing parameterized StudentData constructor:" << endl;
+
+    StudentData student(lN, fN, add, cit, state, zip, phone, freshman);
+
+    cout << endl << "Testing PersonData getter functions:" << endl;
+    cout << "First Name: " << student.getFirstName() << endl;
+    cout << "Last Name: " << student.getLastName() << endl;
+    cout << "Address: " << student.getAddress() << endl;
+    cout << "City: " << student.getCity() << endl;
+    cout << "State: " << student.getState() << endl;
+    cout << "Zip: " << student.getZip() << endl;
+    cout << "Phone: " << student.getPhone() << endl;
+
+    cout << endl << "Testing StudentData getter functions:" << endl;
+    cout << "Student ID: " << student.getStudentID() << endl;
+    cout << "Incoming Freshman: " << student.getIncomingFreshman() << endl;
+
+
+    cout << endl << "Testing PersonData setter functions:" << endl;
+
+    student.setFirstName("Jude");
+    student.setLastName("Dude");
+    student.setAddress("111222 Cool Ln");
+    student.setCity("Waka");
+    student.setState("OH");
+    student.setZip("2222222");
+    student.setPhone("00011111");
+
+    cout << "PersonData values after setters:" << endl;
+    cout << "First Name: " << student.getFirstName() << endl;
+    cout << "Last Name: " << student.getLastName() << endl;
+    cout << "Address: " << student.getAddress() << endl;
+    cout << "City: " << student.getCity() << endl;
+    cout << "State: " << student.getState() << endl;
+    cout << "Zip: " << student.getZip() << endl;
+    cout << "Phone: " << student.getPhone() << endl;
+
+
+    cout << endl << "Testing StudentData setter functions:" << endl;
+
+    student.setStudentID();
+    student.setIncomingFreshman(false);
+
+    cout << "Student ID after setter: " << student.getStudentID() << endl;
+    cout << "Incoming Freshman after setter: "
+        << student.getIncomingFreshman() << endl;
+
+
+    cout << endl << "Testing default StudentData constructor:" << endl;
+
+    StudentData defaultStudent;
+
+    cout << "Default First Name: " << defaultStudent.getFirstName() << endl;
+    cout << "Default Last Name: " << defaultStudent.getLastName() << endl;
+    cout << "Default Address: " << defaultStudent.getAddress() << endl;
+    cout << "Default City: " << defaultStudent.getCity() << endl;
+    cout << "Default State: " << defaultStudent.getState() << endl;
+    cout << "Default Zip: " << defaultStudent.getZip() << endl;
+    cout << "Default Phone: " << defaultStudent.getPhone() << endl;
+    cout << "Default Student ID: " << defaultStudent.getStudentID() << endl;
+    cout << "Default Incoming Freshman: " << defaultStudent.getIncomingFreshman() << endl;
+
+    cout << endl << "All tests completed successfully." << endl;
+
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

@@ -4,11 +4,10 @@
 
 int StudentData::nextID = 0;
 
-StudentData::StudentData()
+StudentData::StudentData() : PersonData()
 {
 	studentID = nextID++;
 	incomingFreshman = false;
-	
 }
 
 StudentData::StudentData(string last, string first, string addr, string cit, string st, string zi, string ph, bool b)
