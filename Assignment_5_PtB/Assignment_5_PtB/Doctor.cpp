@@ -2,14 +2,17 @@
 
 #include "Doctor.h"
 
-Doctor::Doctor()
+Doctor::Doctor() : Worker("", 294000)
 {
-	setName("");
-	setSalary(0);
+
 }
 
-Doctor::Doctor(string n, double d)
+Doctor::Doctor(string n) : Worker(n, 294000)
 {
-	setName(n);
-	setSalary(d);
+
+}
+
+double Doctor::salaryPerWeek()
+{
+	return getSalary() / 52;
 }

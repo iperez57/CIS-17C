@@ -9,7 +9,7 @@ class Doctor : public Worker
 {
 public:
 	Doctor();
-	Doctor(string n, double s);
+	Doctor(string n);
 
 	double salaryPerWeek();
 };
