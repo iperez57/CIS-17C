@@ -12,35 +12,7 @@ LinkedList::LinkedList()
 
 LinkedList::LinkedList(const LinkedList& First)
 {
-    //STUDENT COMPLETES THIS
-    head = nullptr;
-
-    if (First.head == nullptr)
-    {
-        return;
-    }
-
-    Node* current = First.head;
-
-    head = new Node;
-    head->value = current->value;
-    head->next = nullptr;
-
-    Node* tail = head;
-
-    current = current->next;
-
-    while (current != nullptr)
-    {
-        Node* newNode = new Node;
-        newNode->value = current->value;
-        newNode->next = nullptr;
-
-        tail->next = newNode;
-        tail = newNode;
-
-        current = current->next;
-    }
+    head = copyListRecursive(First.head);
 }
 
 LinkedList::~LinkedList()
@@ -207,4 +179,15 @@ void LinkedList::deleteRecursive(Node* current)
     deleteRecursive(current->next);
 
     delete current;
+}
+
+Node* LinkedList::copyListRecursive(const Node* rhs)
+{
+    if (rhs == nullptr)
+        return nullptr;
+    Node* newNode = new Node;
+    newNode->value = rhs->value;
+    newNode->next = copyListRecursive(rhs->next);
+
+    return newNode;
 }
