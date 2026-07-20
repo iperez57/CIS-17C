@@ -33,17 +33,7 @@ LinkedList& LinkedList::operator=(const LinkedList & src)
 
 int LinkedList::size()
 {
-    //STUDENT COMPLETES THIS
-    int counter = 0;
-
-    Node* current = head;
-
-    while (current != nullptr)
-    {
-        counter++;
-        current = current->next;
-    }
-    return counter;
+    return getSizeRecursive(head);
 }
 
 void LinkedList::addToFront(int v)
@@ -150,4 +140,12 @@ void LinkedList::printListRecursive(Node* node)
         return;
     cout << node->value << endl;
     printListRecursive(node->next);
+}
+
+int LinkedList::getSizeRecursive(Node* node)
+{
+    if (node == nullptr)
+        return 0;
+
+    return 1 + getSizeRecursive(node->next);
 }
