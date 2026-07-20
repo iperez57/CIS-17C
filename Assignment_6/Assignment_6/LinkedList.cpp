@@ -47,31 +47,7 @@ void LinkedList::addToFront(int v)
 
 void LinkedList::addToRear(int v)
 {
-    //STUDENT COMPLETES THIS
-    Node* newNode = new Node;
-    newNode->value = v;
-    newNode->next = nullptr;
-
-
-    Node* current = head;
-
-    if (current == nullptr)
-    {
-        head = newNode;
-        return;
-    }
-
-
-    while (current != nullptr)
-    {
-        if (current->next == nullptr)
-        {
-            current->next = newNode;
-            newNode->next = nullptr;
-            return;
-        }
-        current = current->next;
-    }
+    addToRearRecursive(head, v);
 }
 
 void LinkedList::deleteItem(int v)
@@ -148,4 +124,26 @@ int LinkedList::getSizeRecursive(Node* node)
         return 0;
 
     return 1 + getSizeRecursive(node->next);
+}
+
+void LinkedList::addToRearRecursive(Node* node, int i)
+{
+    if (node == nullptr)
+    {
+        Node* newNode = new Node;
+        newNode->value = i;
+        newNode->next = nullptr;
+
+        head = newNode;
+        return;
+    }
+    if (node->next == nullptr)
+    {
+        Node* newNode = new Node;
+        newNode->value = i;
+        newNode->next = nullptr;
+        node->next = newNode;
+        return;
+    }
+    addToRearRecursive(node->next, i);   
 }
