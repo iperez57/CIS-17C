@@ -121,15 +121,7 @@ void LinkedList::swapList(LinkedList& Other)
 
 void LinkedList::printItems()
 {
-    //STUDENT COMPLETES THIS
-    Node* current = head;
-
-    while (current != nullptr)
-    {
-        cout << current->value << endl;
-        current = current->next;
-    }
-
+    printListRecursive(head);
 }
 
 void LinkedList::deleteRecursive(Node* current)
@@ -150,4 +142,12 @@ Node* LinkedList::copyListRecursive(const Node* rhs)
     newNode->next = copyListRecursive(rhs->next);
 
     return newNode;
+}
+
+void LinkedList::printListRecursive(Node* node)
+{
+    if (node == nullptr)
+        return;
+    cout << node->value << endl;
+    printListRecursive(node->next);
 }
