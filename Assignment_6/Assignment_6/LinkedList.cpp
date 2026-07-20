@@ -45,15 +45,7 @@ LinkedList::LinkedList(const LinkedList& First)
 
 LinkedList::~LinkedList()
 {
-    //STUDENT COMPLETES THIS
-    Node* current = head;
-
-    while (current != nullptr)
-    {
-        Node* temp = current->next;
-        delete current;
-        current = temp;
-    }
+    deleteRecursive(head);
     head = nullptr;
 }
 
@@ -206,4 +198,13 @@ void LinkedList::printItems()
         current = current->next;
     }
 
+}
+
+void LinkedList::deleteRecursive(Node* current)
+{
+    if (current == nullptr)
+        return;
+    deleteRecursive(current->next);
+
+    delete current;
 }
